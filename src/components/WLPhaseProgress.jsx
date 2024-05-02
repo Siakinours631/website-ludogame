@@ -2,7 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, LinearProgress,
 
 const WLPhaseProgress = () => {
   const total_pack = 25 * 3
-  const total_sold = 3
+  const total_sold = 4
   const value = 100 - (total_sold * 100 / total_pack)
 
   return (
