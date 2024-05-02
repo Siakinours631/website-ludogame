@@ -15,7 +15,7 @@ export const data = [
       {
         price: 100,
         stock: {
-          sold: 1,
+          sold: 2,
           total: 25
         }
       }
