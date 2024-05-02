@@ -1,8 +1,7 @@
 import { useTheme } from '@mui/material/styles'
 import { Box, Card, CardActions, CardContent, CardHeader, CardMedia, Grid, Typography } from '@mui/material'
 
-import TurnRightIcon from '@mui/icons-material/TurnRight'
-import TurnLeftIcon from '@mui/icons-material/TurnLeft'
+import AlphaButtonOnApp from './AlphaButtonOnApp'
 
 import WLPackCard from './WLPackCard'
 import WLPhaseProgress from './WLPhaseProgress'
@@ -10,15 +9,26 @@ import AlphaPhaseButton from './AlphaPhaseButton'
 
 const AlphaPassCard = () => {
   const theme = useTheme()
+  console.log(theme)
   return (
-    <Card sx={{ display: 'flex', flexDirection: window.innerWidth < 1200 ? 'column':'row' }}>
+    <Card sx={{ display: 'flex', flexDirection: window.innerWidth < 1200 ? 'column':'row', height: '50%'}}>
       <CardMedia
         component="img"
-        sx={{ width: '20%', margin: '1rem', border: '1px solid', borderRadius: '20%' }}
+        sx={{ width: '25%', 
+        margin: '110px', 
+        marginTop: '20px',
+        border: '1px solid', 
+        boxShadow: 1,
+        borderRadius: "70px",
+        p: 2,
+        minWidth: 500,
+         }}
         image="img/wl-pass.png"
         alt="WL Pass cover"
+        
       />
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      
+      <Box sx={{ display: 'flex', flexDirection: 'column'}}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography variant="h5" color="primary">
             The ALPHA Phase
@@ -33,9 +43,6 @@ const AlphaPassCard = () => {
             This first launch phase only includes 75 packs! 
           </Typography>
           <Typography sx={{ textAlign: 'end' }} variant="body1">Join us and take advantage of the best bonuses right now!</Typography>
-
-
-
 
           <Box sx={{ width: '100%' }}>
             <WLPhaseProgress value={22} />
@@ -56,21 +63,15 @@ const AlphaPassCard = () => {
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
               <WLPackCard pack="prestige" phase="1" />
             </Grid>
+            <AlphaButtonOnApp/>
+
           </Grid>
 
-        <Typography sx={{ textAlign: 'center' }} variant="body1" color="primary">
-          Already have your <strong style={{ color: theme.palette.secondary.main }}>LUDOGame</strong> pack?<br />
-          <TurnLeftIcon style={{ verticalAlign: 'middle', transform: 'rotate(-90deg)' }} />
-          Join the ALPHA now!
-          <TurnRightIcon style={{ verticalAlign: 'middle', transform: 'rotate(90deg)' }} />
-        </Typography>
 
-        </CardContent>
+          </CardContent>
 
-        <CardActions>
-          <AlphaPhaseButton/>
-        </CardActions>
-      </Box>
+        </Box>
+        
 
     </Card>
   )
