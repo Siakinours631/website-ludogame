@@ -36,21 +36,21 @@ const ProjectCard = () => {
           <Typography sx={{ textAlign: 'end' }} variant="body1">Roll the dice, race to victory, and reign supreme with LUDO Game on Solana.</Typography>
 
           <Box sx={{ display: 'flex', justifyContent: 'end', alignItems: 'center', pl: 1, pb: 1 }}>
-            <Typography variant="subtitle1" sx={{ ml: 1, mr: 1 }} color="secondary">Follow us</Typography>
+            <Typography variant="subtitle1" sx={{ ml: 1, mr: 1 }} color="secondary" style={{fontSize: "30px"}}>Follow us</Typography>
             <IconButton
               onClick={() => window.open('https://x.com/ludogame_io', '_blank')}
               aria-label="(X) Twitter link">
-              <XTwitterIcon sx={{ width: '1rem', height: '1rem', color: theme.palette.secondary.main }} />
+              <XTwitterIcon sx={{ width: '2rem', height: '3rem', color: theme.palette.secondary.main }} />
             </IconButton>
             <IconButton
               onClick={() => window.open('https://github.com/ludogame-io', '_blank') }
               aria-label="Github link">
-              <GithubIcon sx={{ width: '1rem', height: '1rem', color: theme.palette.secondary.main }} />
+              <GithubIcon sx={{ width: '2.3rem', height: '2.3rem', color: theme.palette.secondary.main }} />
             </IconButton>
             <IconButton
               onClick={() => window.open('https://discord.gg/qUKTDgS8NZ', '_blank')}
               aria-label="Discord link">
-              <DiscordIcon sx={{ width: '1rem', height: '1rem', color: theme.palette.secondary.main }} />
+              <DiscordIcon sx={{ width: '2.5rem', height: '2.5rem', color: theme.palette.secondary.main }} />
             </IconButton>
           </Box>
         </CardContent>
