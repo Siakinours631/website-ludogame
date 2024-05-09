@@ -3,6 +3,7 @@ import { Button } from '@mui/material'
 const AlphaPhaseButton = () => {
   return (
     <Button
+    style={{width: '100vh'}}
       onClick={() => window.location.href = 'https://alpha.ludogame.io' }
       fullWidth
       color="secondary"
